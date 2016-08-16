@@ -101,14 +101,10 @@
 		7C5312221D62E09100ACA686 /* HWTabBarController-Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				7C5312261D62E09100ACA686 /* AppDelegate.h */,
-				7C5312271D62E09100ACA686 /* AppDelegate.m */,
-				7C5312291D62E09100ACA686 /* ViewController.h */,
-				7C53122A1D62E09100ACA686 /* ViewController.m */,
-				7C53122C1D62E09100ACA686 /* Main.storyboard */,
-				7C53122F1D62E09100ACA686 /* Assets.xcassets */,
-				7C5312311D62E09100ACA686 /* LaunchScreen.storyboard */,
-				7C5312341D62E09100ACA686 /* Info.plist */,
+				7C5312561D62E09A00ACA686 /* AppDelegate */,
+				7C5312591D62E16200ACA686 /* Model */,
+				7C5312581D62E0B100ACA686 /* View */,
+				7C5312571D62E0A400ACA686 /* Controller */,
 				7C5312231D62E09100ACA686 /* Supporting Files */,
 			);
 			path = "HWTabBarController-Calculator";
@@ -117,7 +113,10 @@
 		7C5312231D62E09100ACA686 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7C53122F1D62E09100ACA686 /* Assets.xcassets */,
+				7C5312311D62E09100ACA686 /* LaunchScreen.storyboard */,
 				7C5312241D62E09100ACA686 /* main.m */,
+				7C5312341D62E09100ACA686 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +137,47 @@
 				7C53124A1D62E09100ACA686 /* Info.plist */,
 			);
 			path = "HWTabBarController-CalculatorUITests";
+			sourceTree = "<group>";
+		};
+		7C5312561D62E09A00ACA686 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				7C5312261D62E09100ACA686 /* AppDelegate.h */,
+				7C5312271D62E09100ACA686 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		7C5312571D62E0A400ACA686 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7C5312291D62E09100ACA686 /* ViewController.h */,
+				7C53122A1D62E09100ACA686 /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7C5312581D62E0B100ACA686 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7C53125A1D62E17700ACA686 /* Storyboards */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7C5312591D62E16200ACA686 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7C53125A1D62E17700ACA686 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7C53122C1D62E09100ACA686 /* Main.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,6 +456,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "HWTabBarController-Calculator/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.itisiOSlab.HWTabBarController-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -427,6 +468,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "HWTabBarController-Calculator/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.itisiOSlab.HWTabBarController-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
