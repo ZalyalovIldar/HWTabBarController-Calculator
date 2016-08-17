@@ -23,8 +23,8 @@ static NSString *CELL_Identifier = @"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     _arr = @[@"cat1", @"cat2", @"cat3", @"cat4", @"cat5", @"cat6"];
-    //UINib *customCellNib = [UINib nibWithNibName:@"TableViewCell" bundle:nil];
-    //[_tableView registerNib:customCellNib forCellReuseIdentifier:CELL_Identifier];
+    UINib *customCellNib = [UINib nibWithNibName:@"TableViewCell" bundle:nil];
+    [_tableView registerNib:customCellNib forCellReuseIdentifier:CELL_Identifier];
     // Do any additional setup after loading the view.
 }
 
