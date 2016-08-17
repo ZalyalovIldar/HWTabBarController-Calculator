@@ -23,9 +23,7 @@ static NSString *CELL_Identifier = @"cell";
     [super viewDidLoad];
     
     UINib *customCellNib = [UINib nibWithNibName:@"CustomCell" bundle:nil];
-    
     [self.tableView registerNib:customCellNib forCellReuseIdentifier:CELL_Identifier];
-    
 }
 
 - (void)didReceiveMemoryWarning {

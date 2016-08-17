@@ -24,7 +24,7 @@ static NSString *CELL_Identifier = @"cell";
     [super viewDidLoad];
     _arr = @[@"cat1", @"cat2", @"cat3", @"cat4", @"cat5", @"cat6"];
     UINib *customCellNib = [UINib nibWithNibName:@"TableViewCell" bundle:nil];
-    [_tableView registerNib:customCellNib forCellReuseIdentifier:CELL_Identifier];
+    [self.tabelView registerNib:customCellNib forCellReuseIdentifier:CELL_Identifier];
     // Do any additional setup after loading the view.
 }
 
@@ -39,36 +39,40 @@ static NSString *CELL_Identifier = @"cell";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section { //количество ячеек
-    return _arr.count;
+    return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TableViewCell *cell = (TableViewCell*)[tableView dequeueReusableCellWithIdentifier:CELL_Identifier forIndexPath:indexPath];
-    
     cell.cellLabel.text = _arr[indexPath.row];
     [cell.cellImage setImage:[UIImage imageNamed:_arr[indexPath.row]]];
-    
     return cell;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 80;
+}
+
+
+
 -(void)chooseImage : (int)imageNumber {
     switch (imageNumber) {
-        case 1:
+        case 0:
             [_secretImage setImage:[UIImage imageNamed:@"cat1"]];
             break;
-        case 2:
+        case 1:
             [_secretImage setImage:[UIImage imageNamed:@"cat2"]];
             break;
-        case 3:
+        case 2:
             [_secretImage setImage:[UIImage imageNamed:@"cat3"]];
             break;
-        case 4:
+        case 3:
             [_secretImage setImage:[UIImage imageNamed:@"cat4"]];
             break;
-        case 5:
+        case 4:
             [_secretImage setImage:[UIImage imageNamed:@"cat5"]];
             break;
-        case 6:
+        case 5:
             [_secretImage setImage:[UIImage imageNamed:@"cat6"]];
             break;
         default:
@@ -76,8 +80,12 @@ static NSString *CELL_Identifier = @"cell";
     }
 }
 
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self chooseImage:(int)indexPath.row];
+}
+
 - (IBAction)secretButton:(id)sender {
-    int randomValue = 1 + (random() % 6);
+    int randomValue = 0 +(random() % 6 - 0);
     NSLog(@"%i", randomValue);
     [self chooseImage:randomValue];
 }

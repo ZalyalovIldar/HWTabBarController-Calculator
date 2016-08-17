@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _index = -1;
+    _result = @"Нет результата";
     _keepResultArray = [NSMutableArray arrayWithObjects : @"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата", nil];
     
     // Do any additional setup after loading the view, typically from a nib.
@@ -138,7 +139,7 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     TableViewController *tc = [segue destinationViewController];
-    if (_index<15) {
+    if (_index<14) {
         _index = _index + 1;
     }
     else {
@@ -147,6 +148,9 @@
     [_keepResultArray replaceObjectAtIndex:_index withObject:_result];
     tc.arr = _keepResultArray;
     NSLog(@"%@", [_keepResultArray objectAtIndex:_index]);
+    if([[_keepResultArray objectAtIndex:_index] isEqual:@"Нет результата"]){
+        _index = -1;
+    }
 }
 
 @end
