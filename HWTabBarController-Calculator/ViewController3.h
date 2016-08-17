@@ -10,4 +10,7 @@
 
 @interface ViewController3 : UIViewController
 
+@property (strong, nonatomic) NSString *resultString;
+
 @end
+
