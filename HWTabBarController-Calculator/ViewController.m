@@ -7,12 +7,13 @@
 //
 
 #import "ViewController.h"
-#import "ViewController3.h"
+#import "TableViewController.h"
 
 @interface ViewController ()
 
 @property (nonatomic) int index;
 @property (strong, nonatomic)NSString *result;
+@property (strong, nonatomic) NSMutableArray *keepResultArray;
 
 @end
 
@@ -20,6 +21,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _index = -1;
+    _keepResultArray = [NSMutableArray arrayWithObjects : @"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата", nil];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -133,8 +137,16 @@
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    ViewController3 *vc3 = [segue destinationViewController];
-    vc3.resultString = _result;
+    TableViewController *tc = [segue destinationViewController];
+    if (_index<15) {
+        _index = _index + 1;
+    }
+    else {
+        _index = 0;
+    }
+    [_keepResultArray replaceObjectAtIndex:_index withObject:_result];
+    tc.arr = _keepResultArray;
+    NSLog(@"%@", [_keepResultArray objectAtIndex:_index]);
 }
 
 @end

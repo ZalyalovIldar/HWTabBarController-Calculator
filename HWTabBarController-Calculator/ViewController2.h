@@ -11,5 +11,6 @@
 @interface ViewController2 : UIViewController
 
 @property (strong, nonatomic) NSString *resultString;
+@property (weak, nonatomic) IBOutlet UITableView *tabelView;
 
 @end

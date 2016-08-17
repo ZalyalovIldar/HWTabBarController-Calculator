@@ -1,5 +1,5 @@
 //
-//  ViewController3.h
+//  TableViewController.h
 //  HWTabBarController-Calculator
 //
 //  Created by Ленар on 17.08.16.
@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController3 : UIViewController
-@property (strong, nonatomic) NSString *labelText;
+@interface TableViewController : UITableViewController
+
+@property (strong, nonatomic) NSMutableArray* arr;
 
 @end
