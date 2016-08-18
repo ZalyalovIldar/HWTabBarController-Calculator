@@ -22,8 +22,12 @@ static NSString *CELL_Identifier = @"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UINib *customCellNib = [UINib nibWithNibName:@"CustomCell" bundle:nil];
-    [self.tableView registerNib:customCellNib forCellReuseIdentifier:CELL_Identifier];
+    UINib *customCellNib = [UINib nibWithNibName:@"CustomCell" bundle:nil];//мы регистрируем нашу кастомную ячейку в таблице
+    [self.tableView registerNib:customCellNib forCellReuseIdentifier:CELL_Identifier];//если так не сделать, то таблица не поймет какую ячейку откуда брать по IndexPath
+    //потому что мы удалили со сториборда ячейку
+    //и по сути она вообще не поймет, про какую ячейку мы ведем речь, если она не зарегана в ней
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,11 +59,18 @@ static NSString *CELL_Identifier = @"cell";
     return 70;
 }
 
--(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self performSegueWithIdentifier:@"segue" sender:self];
-}
-
 #pragma mark - Navigation
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Предупреждение" message:@"Вы уверены, что хотите перейти?" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"Да" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){
+        [self performSegueWithIdentifier:@"segue" sender:self];
+    }];
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"Отмена" style:UIAlertActionStyleCancel handler:nil];
+    [alert addAction:action1];
+    [alert addAction:action2];
+    [self presentViewController:alert animated:true completion:nil];
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];

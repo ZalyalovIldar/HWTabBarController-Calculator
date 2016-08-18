@@ -16,6 +16,7 @@
 		7C53123E1D62E09100ACA686 /* HWTabBarController_CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C53123D1D62E09100ACA686 /* HWTabBarController_CalculatorTests.m */; };
 		7C5312491D62E09100ACA686 /* HWTabBarController_CalculatorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5312481D62E09100ACA686 /* HWTabBarController_CalculatorUITests.m */; };
 		AE36EFCC1D637A5D0059D3B2 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = AE36EFCB1D637A5D0059D3B2 /* ViewController2.m */; };
+		AEE731081D65A27600BF103D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE731071D65A27600BF103D /* SettingsViewController.m */; };
 		AEF52FB41D6476E300C5AB36 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF52FB21D6476E300C5AB36 /* TableViewCell.m */; };
 		AEF52FB51D6476E300C5AB36 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEF52FB31D6476E300C5AB36 /* TableViewCell.xib */; };
 		AEF52FB91D648F2C00C5AB36 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF52FB81D648F2C00C5AB36 /* TableViewController.m */; };
@@ -60,6 +61,8 @@
 		7C53124A1D62E09100ACA686 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE36EFCA1D637A5D0059D3B2 /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
 		AE36EFCB1D637A5D0059D3B2 /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		AEE731061D65A27600BF103D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		AEE731071D65A27600BF103D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		AEF52FB11D6476E300C5AB36 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		AEF52FB21D6476E300C5AB36 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		AEF52FB31D6476E300C5AB36 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
@@ -179,6 +182,7 @@
 		7C5312581D62E0B100ACA686 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AEE731091D65A9B200BF103D /* xib */,
 				7C53125A1D62E17700ACA686 /* Storyboards */,
 			);
 			name = View;
@@ -187,8 +191,6 @@
 		7C5312591D62E16200ACA686 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AEF52FB31D6476E300C5AB36 /* TableViewCell.xib */,
-				AEF52FBD1D64932300C5AB36 /* CustomCell.xib */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -204,6 +206,7 @@
 		AE36EFC81D637A2F0059D3B2 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				AEE731051D65A21600BF103D /* SettingsVC */,
 				AE36EFD41D637B260059D3B2 /* ResultTVC */,
 				AE36EFD31D637B030059D3B2 /* CalculatorVC */,
 			);
@@ -235,6 +238,24 @@
 				AEF52FB61D648F0F00C5AB36 /* TableViewController */,
 			);
 			name = ResultTVC;
+			sourceTree = "<group>";
+		};
+		AEE731051D65A21600BF103D /* SettingsVC */ = {
+			isa = PBXGroup;
+			children = (
+				AEE731061D65A27600BF103D /* SettingsViewController.h */,
+				AEE731071D65A27600BF103D /* SettingsViewController.m */,
+			);
+			name = SettingsVC;
+			sourceTree = "<group>";
+		};
+		AEE731091D65A9B200BF103D /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				AEF52FBD1D64932300C5AB36 /* CustomCell.xib */,
+				AEF52FB31D6476E300C5AB36 /* TableViewCell.xib */,
+			);
+			name = xib;
 			sourceTree = "<group>";
 		};
 		AEF52FB61D648F0F00C5AB36 /* TableViewController */ = {
@@ -419,6 +440,7 @@
 				7C53122B1D62E09100ACA686 /* ViewController.m in Sources */,
 				AEF52FB41D6476E300C5AB36 /* TableViewCell.m in Sources */,
 				AEF52FBE1D64932300C5AB36 /* CustomCell.m in Sources */,
+				AEE731081D65A27600BF103D /* SettingsViewController.m in Sources */,
 				AE36EFCC1D637A5D0059D3B2 /* ViewController2.m in Sources */,
 				7C5312281D62E09100ACA686 /* AppDelegate.m in Sources */,
 				7C5312251D62E09100ACA686 /* main.m in Sources */,

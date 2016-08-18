@@ -14,6 +14,7 @@
 @property (nonatomic) int index;
 @property (strong, nonatomic)NSString *result;
 @property (strong, nonatomic) NSMutableArray *keepResultArray;
+@property (weak, nonatomic) IBOutlet UIButton *numButtons;
 
 @end
 
@@ -24,6 +25,27 @@
     _index = -1;
     _result = @"Нет результата";
     _keepResultArray = [NSMutableArray arrayWithObjects : @"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата",@"Нет результата", nil];
+    NSUserDefaults *numberSwitch = [NSUserDefaults standardUserDefaults];
+    [numberSwitch synchronize];
+    NSLog(@"%li",(long)[numberSwitch integerForKey:@"L"]);
+    switch ([numberSwitch integerForKey:@"L"]) {
+        case 0:
+            displayLabel.backgroundColor = [UIColor blackColor];
+            break;
+        case 1:
+            displayLabel.backgroundColor = [UIColor greenColor];
+            break;
+        case 2:
+            displayLabel.backgroundColor = [UIColor whiteColor];
+            displayLabel.textColor = [UIColor blackColor];
+            break;
+        case 3:
+            displayLabel.backgroundColor = [UIColor blueColor];
+            break;
+            
+        default:
+            break;
+    }
     
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -31,6 +53,34 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    NSUserDefaults *numberSwitch = [NSUserDefaults standardUserDefaults];
+    [numberSwitch synchronize];
+    NSLog(@"%li",(long)[numberSwitch integerForKey:@"L"]);
+    switch ([numberSwitch integerForKey:@"L"]) {
+        case 0:
+            displayLabel.backgroundColor = [UIColor blackColor];
+            displayLabel.textColor = [UIColor whiteColor];
+            break;
+        case 1:
+            displayLabel.backgroundColor = [UIColor greenColor];
+            displayLabel.textColor = [UIColor whiteColor];
+            break;
+        case 2:
+            displayLabel.backgroundColor = [UIColor whiteColor];
+            displayLabel.textColor = [UIColor blackColor];
+            break;
+        case 3:
+            displayLabel.backgroundColor = [UIColor blueColor];
+            displayLabel.textColor = [UIColor whiteColor];
+            break;
+            
+        default:
+            break;
+    }
+
 }
 
 -(IBAction)del:(id)sender{
