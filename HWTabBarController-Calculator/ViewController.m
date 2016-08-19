@@ -23,5 +23,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)buttonAction:(id)sender {
+    UIStoryboard *loginStoyboard = [UIStoryboard storyboardWithName:@"LoginStoryboard" bundle:nil];
+    UIViewController *vc = [loginStoyboard instantiateViewControllerWithIdentifier:@"loginVC"];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end

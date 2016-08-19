@@ -15,6 +15,7 @@
 		7C5312331D62E09100ACA686 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5312311D62E09100ACA686 /* LaunchScreen.storyboard */; };
 		7C53123E1D62E09100ACA686 /* HWTabBarController_CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C53123D1D62E09100ACA686 /* HWTabBarController_CalculatorTests.m */; };
 		7C5312491D62E09100ACA686 /* HWTabBarController_CalculatorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5312481D62E09100ACA686 /* HWTabBarController_CalculatorUITests.m */; };
+		7CB1761F1D66DE82005A859C /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CB1761E1D66DE82005A859C /* LoginStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		7C5312441D62E09100ACA686 /* HWTabBarController-CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HWTabBarController-CalculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C5312481D62E09100ACA686 /* HWTabBarController_CalculatorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWTabBarController_CalculatorUITests.m; sourceTree = "<group>"; };
 		7C53124A1D62E09100ACA686 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CB1761E1D66DE82005A859C /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				7C53122C1D62E09100ACA686 /* Main.storyboard */,
+				7CB1761E1D66DE82005A859C /* LoginStoryboard.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				7C5312331D62E09100ACA686 /* LaunchScreen.storyboard in Resources */,
 				7C5312301D62E09100ACA686 /* Assets.xcassets in Resources */,
 				7C53122E1D62E09100ACA686 /* Main.storyboard in Resources */,
+				7CB1761F1D66DE82005A859C /* LoginStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +544,7 @@
 				7C53124F1D62E09100ACA686 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C5312501D62E09100ACA686 /* Build configuration list for PBXNativeTarget "HWTabBarController-CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +553,7 @@
 				7C5312521D62E09100ACA686 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C5312531D62E09100ACA686 /* Build configuration list for PBXNativeTarget "HWTabBarController-CalculatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +562,7 @@
 				7C5312551D62E09100ACA686 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
